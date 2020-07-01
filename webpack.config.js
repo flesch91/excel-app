@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
-const isDev = !isProd
+const isDev = !isProd;
 
 const filename = ext => (isDev) ? `bundle.${ext}` : `bundle.[hash].${ext}`;
 const isLoader = () => {
@@ -24,6 +24,7 @@ const isLoader = () => {
 
   return loaders;
 };
+
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
