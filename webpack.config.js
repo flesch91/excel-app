@@ -75,11 +75,10 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              htm: isDev,
+              hmr: isDev,
               reloadAll: true
             }
           },
-
           'css-loader',
           'sass-loader',
         ],
